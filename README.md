@@ -1,14 +1,11 @@
 # Megaverse
 
-This script automates the creation of entities within a virtual megaverse as part of a challenge. It is designed to interact with a specific API, fetch a goal configuration, and set up entities (Polyanets, Soloons, and Comeths) based on the fetched configuration.
-Features
-•	Fetches goal configuration for entity placement from a RESTful API.
-•	Automatically sets up entities in the megaverse according to the fetched goal configuration.
-•	Supports creating three types of entities: Polyanets, Soloons, and Comeths, with customizable parameters (e.g., color for Soloons, direction for Comeths).
+This script automates the setup of entities in the Megaverse challenge. It supports creating Polyanets, Soloons, and Comeths based on a goal configuration fetched from an API. The script uses a YAML file for configuration to enhance flexibility.
 
 ## Prerequisites
-•	Python 3.x installed on your system.
-•	requests library installed. You can install it using pip
+This script requires Python 3 and the following Python packages:
+- requests for making API requests
+- pyyaml (or yaml) for parsing YAML configuration files
 
 ## How to Run
 1.	Open a terminal or command prompt.
@@ -16,6 +13,10 @@ Features
 3.	Run the script using the following command:
 python Megaverse_creater.py
 
-## Configuration  	
-•	Candidate ID: The script uses a hard-coded candidate ID for API authentication.
-•	API Base URL: The base URL for the API endpoints is configured at the beginning of the script. 
+## Script Functions
+- load_config(): Loads API configuration from a YAML file.
+- create_entity(): Creates an entity in the Megaverse.
+- setup_phase(): Iterates through a goal configuration and creates entities accordingly.
+- fetch_goal_array(): Fetches the goal configuration from the API.
+- main(): The main function that orchestrates fetching the goal configuration and setting up entities.
+
